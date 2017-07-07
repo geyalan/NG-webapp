@@ -1,0 +1,9 @@
+<ul class="position-list">
+	<li class="item" ng-repeat="item in data">
+		<img class="logo f-l" ng-src="{{item.imageUrl}}"/>
+		<h3 class="title" ng-bind="item.job"></h3>
+		<p class="text" ng-bind="item.compannyName + '[' + item.cityName +']' + ' ' + item.industryName + ' ' + item.scaleName"></p>
+		<!-- <p class="text c-r" ng-bind="item.salaryName"></p> -->
+		<p class="text" ng-bind="item.date"></p>
+	</li>
+</ul>

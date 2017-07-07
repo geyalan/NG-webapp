@@ -1,26 +1,4 @@
 'use strict';
-
-angular.module('app',['ui.router']);
-'use strict';
-
-angular.module('app').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
-	$stateProvider.state('main',{
-		url:'/main',
-		templateUrl: 'view/main.html',
-		controller:'mainCtrl'
-	});
-	$urlRouterProvider.otherwise('main');
-}])
-
-// angular.module('app').config(function($stateProvider,$urlRouterProvider){
-// 	$stateProvider.state('main',{
-// 		url:'/main',
-// 		templateUrl: 'view/main.html',
-// 		controller:'mainCtrl'
-// 	})
-// 	$urlRouterProvider.otherwise('main')
-// })
-'use strict';
 angular.module('app').controller('mainCtrl',['$scope',function($scope){
 	$scope.list = [{
     "id": "p3",
@@ -81,30 +59,3 @@ angular.module('app').controller('mainCtrl',['$scope',function($scope){
     "date": "2016-06-01 01:05"
   }]
 }]);
-'use strict';
- angular.module('app').directive('appFoot',[function(){
- 	return {
- 		restrict:'A',
- 		replace:true,
- 		templateUrl:'view/template/foot.html'
- 	}
- }])
-'use strict';
-angular.module('app').directive('appHead',[function(){
-	return {
-		restrict:'A',
-		replace:true,
-		templateUrl:'view/template/head.html'
-	};
-}])
-'use strict';
-angular.module('app').directive('appPositionList',[function(){
-	return {
-		restrict:'A',
-		replace:true,
-		templateUrl:'view/template/positionList.html',
-		scope:{
-			data:'='
-		}
-	}
-}])

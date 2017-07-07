@@ -5,8 +5,8 @@ angular.module('app').config(['$stateProvider','$urlRouterProvider',function($st
 		url:'/main',
 		templateUrl: 'view/main.html',
 		controller:'mainCtrl'
-	})
-	$urlRouterProvider.otherwise('main')
+	});
+	$urlRouterProvider.otherwise('main');
 }])
 
 // angular.module('app').config(function($stateProvider,$urlRouterProvider){
